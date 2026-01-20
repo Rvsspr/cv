@@ -1,0 +1,3 @@
+Place your resume PDF here with the filename: resume.pdf
+
+When you add `resume.pdf` to this folder, the "Download CV" button on the home page will link to it.

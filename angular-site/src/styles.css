@@ -1,0 +1,53 @@
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #7c3aed;
+  --text: #e6eef6;
+}
+a@import url('https://cdn.jsdelivr.net/npm/@angular/material@16.2.0/prebuilt-themes/indigo-pink.css');
+
+html,body{height:100%;margin:0;font-family:Roboto, Arial, sans-serif;background:linear-gradient(180deg,#071029 0%, #0f1724 100%);color:var(--text)}
+a{color:var(--accent)}
+.app-shell{max-width:1100px;margin:32px auto;padding:24px}
+.toolbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.nav{display:flex;gap:12px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+.hero{display:flex;gap:24px;align-items:center}
+.avatar{width:120px;height:120px;border-radius:16px;flex-shrink:0;background:linear-gradient(135deg,var(--accent),#3b82f6)}
+.grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+@media(max-width:880px){.grid{grid-template-columns:1fr}}
+
+/* polished CV styles */
+.mat-card{background:transparent;border-radius:12px}
+.cv-header{display:flex;gap:18px;align-items:center}
+.name{font-size:1.6rem;font-weight:700}
+.muted{color:var(--muted)}
+.resume-btn{background:linear-gradient(90deg,var(--accent),#3b82f6);color:white;padding:8px 12px;border-radius:8px;border:none}
+.contact-list p{margin:6px 0}
+
+/* inner card style */
+.card--inner{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px}
+
+/* chips */
+mat-chip{background:rgba(255,255,255,0.02);color:var(--text);border-radius:8px;padding:6px}
+
+/* links */
+.resume-link{color:var(--text);opacity:0.85;text-decoration:none}
+.resume-link:hover{opacity:1;text-decoration:underline}
+
+/* small-screen tweaks */
+@media(max-width:720px){
+  .cv-header{flex-direction:column;align-items:flex-start}
+  .grid{grid-template-columns:1fr}
+}
+
+/* Print styles for resume export */
+@media print{
+  body{background:white;color:black}
+  .app-shell, .card{box-shadow:none;background:transparent}
+  .toolbar, .nav, a.mat-button, .resume-btn, mat-slide-toggle{display:none}
+  .card--inner{border:0;padding:0}
+  pre{white-space:pre-wrap}
+}
+
